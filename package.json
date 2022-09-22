@@ -6,8 +6,17 @@
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
+    "test": "jest",
     "prepack": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint . --fix --cache"
+  },
+  "pre-commit": "lint",
+  "author": "Dominic Birch <dominicbirch@outlook.com> https://github.com/dominicbirch",
+  "homepage": "https://github.com/dominicbirch/replace-resolve-webpack-plugin/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominicbirch/replace-resolve-webpack-plugin.git"
   },
   "keywords": [
     "webpack",
@@ -24,14 +33,21 @@
     "webpack plugin",
     "replace import"
   ],
-  "author": "Dominic Birch",
-  "license": "MIT",
   "peerDependencies": {
     "webpack": "^5.0.0"
   },
   "devDependencies": {
+    "@types/jest": "^29.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
     "bundle-declarations-webpack-plugin": "^3.1.1",
+    "eslint": "^8.23.1",
+    "eslint-config-xo": "^0.42.0",
+    "jest-junit": "^14.0.1",
+    "pre-commit": "^1.2.2",
+    "ts-jest": "^29.0.1",
     "ts-loader": "^9.4.1",
+    "ts-sinon": "^2.0.2",
     "typescript": "^4.8.3",
     "webpack": "^5.74.0"
   }

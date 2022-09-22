@@ -1,0 +1,10 @@
+{
+    "explorer.fileNesting.expand": false,
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        ".eslintrc.js": ".eslintcache",
+        "*.ts": "$(capture).*",
+        "*.js": "$(capture).*",
+        "*.json": "$(capture)*.json",
+    },
+}

@@ -1,0 +1,14 @@
+.vscode/
+node_modules/
+src/
+/tsconfig.json
+/*.ts
+/*.tgz
+.artifactignore
+.npmignore
+coverage/
+.eslintcache
+.eslintrc.*
+.github/
+junit.xml
+test-results.json

@@ -2,6 +2,7 @@
 ![NPM version](https://badge.fury.io/js/replace-resolve-webpack-plugin.svg)
 [![release](https://github.com/dominicbirch/replace-resolve-webpack-plugin/actions/workflows/release.yml/badge.svg)](https://github.com/dominicbirch/replace-resolve-webpack-plugin/actions/workflows/release.yml)
 [![build](https://github.com/dominicbirch/replace-resolve-webpack-plugin/actions/workflows/test.yml/badge.svg)](https://github.com/dominicbirch/replace-resolve-webpack-plugin/actions/workflows/test.yml)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 This is a [webpack](https://webpack.js.org) resolve plugin which supports replacing imports in directory A, with any imports that exist at the same relative path in directory B (optional substitution by convention).  
 
