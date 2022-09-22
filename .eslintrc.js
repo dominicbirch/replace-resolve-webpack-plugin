@@ -11,4 +11,9 @@ module.exports = {
 		'dist/**',
 		'node_modules/**',
 	],
+	env: {
+		browser: false,
+		es2021: true,
+		jest: true,
+	},
 };
