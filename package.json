@@ -1,0 +1,38 @@
+{
+  "name": "replace-resolve-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Allows replacement of imports based on equivalent relative path in a given directory",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "theme",
+    "themes",
+    "webpack-plugin",
+    "resolve-plugin",
+    "plugin",
+    "resolver",
+    "resolve",
+    "module-resolver",
+    "module-replacement",
+    "replace module",
+    "webpack plugin",
+    "replace import"
+  ],
+  "author": "Dominic Birch",
+  "license": "MIT",
+  "peerDependencies": {
+    "webpack": "^5.0.0"
+  },
+  "devDependencies": {
+    "bundle-declarations-webpack-plugin": "^3.1.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.3",
+    "webpack": "^5.74.0"
+  }
+}
