@@ -1,6 +1,6 @@
 {
   "name": "replace-resolve-webpack-plugin",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Allows replacement of imports based on equivalent relative path in a given directory",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
