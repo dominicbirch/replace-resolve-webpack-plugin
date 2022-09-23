@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: actions/setup-node@v3
+        with:
+          cache: npm
       - run: npm ci
       - run: npm test -- --ci --coverage --json --outputFile=test-results.json --testResultsProcessor="jest-junit"
       - name: Code Coverage Summary Report

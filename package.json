@@ -1,6 +1,6 @@
 {
   "name": "replace-resolve-webpack-plugin",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Allows replacement of imports based on equivalent relative path in a given directory",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -44,6 +44,7 @@
     "eslint": "^8.23.1",
     "eslint-config-xo": "^0.42.0",
     "jest-junit": "^14.0.1",
+    "memfs": "^3.4.7",
     "pre-commit": "^1.2.2",
     "ts-jest": "^29.0.1",
     "ts-loader": "^9.4.1",
