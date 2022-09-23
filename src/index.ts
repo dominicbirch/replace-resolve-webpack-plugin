@@ -1,10 +1,10 @@
-import { existsSync } from "node:fs";
+import { existsSync, statSync } from "node:fs";
 import { isAbsolute, join, relative, resolve } from "node:path";
 import type { ResolvePluginInstance, Resolver } from "webpack";
 
 
 function replacementExists(newRequest: string, { mainFiles, extensions }: Resolver["options"]) {
-    return existsSync(newRequest) // fully qualified file
+    return (existsSync(newRequest) && statSync(newRequest).isFile()) // fully qualified file
         || function () {
             for (const ext of extensions) {
                 if (existsSync(`${newRequest}${ext}`)) {
