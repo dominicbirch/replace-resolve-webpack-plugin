@@ -13,3 +13,6 @@ coverage/
 .github/
 junit.xml
 test-results.json
+__tests__
+__mocks__
+jest.config.*

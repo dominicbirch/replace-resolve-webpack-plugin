@@ -10,3 +10,6 @@ src/
 .eslintcache
 .eslintrc.*
 .github/
+__tests__
+__mocks__
+jest.config.*
