@@ -70,16 +70,17 @@ export class ReplaceResolvePlugin implements ResolvePluginInstance {
                 this.options.to,
                 relative(
                     this.options.from,
-                    // imports like "components/test" should be treated as relative to original 
-                    // but relative "../components/test" should work as relative to where they are requested
-                    resolve((path.indexOf(this.options.to) !== -1 && request[0] !== ".") 
-                        ? path.replace(this.options.to, this.options.from)
-                        : path, request)
+                    resolve(path, request)
                 )
             );
 
             if (replacementExists(newRequest, resolver.options)) {
                 r.request = newRequest;
+            } else if (path.indexOf(this.options.to) !== -1 && request[0] !== ".") {
+                const overrideModuleRequest = resolve(this.options.to, request);
+                if (replacementExists(overrideModuleRequest, resolver.options)) {
+                    r.request = overrideModuleRequest;
+                }
             }
 
             callback();

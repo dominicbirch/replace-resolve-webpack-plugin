@@ -13,6 +13,31 @@ There are potentially a few scenarios where this might be useful to do at build-
 
 While it makes sense in situations where you want to replace a lot of imports with different values, it's less convenient in cases where the intention is to redirect lots of modules to a small set of replacements; in such cases I would suggest leveraging either [webpack's alias](https://webpack.js.org/configuration/resolve/#resolvealias) or [NormalModuleReplacementPlugin](https://webpack.js.org/plugins/normal-module-replacement-plugin/).
 
+**Alternatively,** in simple use cases where only module resolution precedence (no absolute, dot paths or imports with extensions are involved), it would probably be simpler to make use of `resolve.modules` in webpack's configuration rather than using this plugin.  
+
+For example, the equivalent to the plugin example would look like this:
+```mjs
+import { resolve } from "node:path";
+
+/** @type {import("webpack").Configuration} */
+export default {
+    // ...
+    resolve: {
+        modules: [
+            resolve("./replacements"), 
+            resolve("./src"),
+            "node_modules",
+        ],
+    },
+};
+// results in ...
+import Foo from "components/Foo" 
+// resolution attempts in order:
+//    1 ./replacements/Foo
+//    2 ./src/Foo 
+//    3 **/node_modules/components/Foo
+```
+
 ## Example usage
 ```mjs
 import ReplaceResolvePlugin from "replace-resolve-webpack-plugin";
